@@ -54,22 +54,31 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
+show_excerpts: true
 texture:
   title: Lenselle Nicolas
   tagline: DevOps. Architecte Logiciel
   date_format: "%b %-d, %Y"
+  style: blue 
+  showNav: true
 
   social_links:
     twitter: lensellenicolas
     github:  ln-nicolas
     linkedIn: in/lenselle # format: locale/username
   
-  style: blue 
-  showNav: true
-
   navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
+    - title: Prestashop
+      url: "/category/prestashop"
+
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
